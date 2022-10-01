@@ -23,7 +23,7 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
 
-#window:
+window:
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
@@ -67,7 +67,7 @@
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  #opacity: 1.0
+  opacity: 0.90
 
   # Startup Mode (changes require restart)
   #
@@ -162,8 +162,8 @@ font:
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   offset:
-  #  x: 0
-    y: 2
+    x: 0
+    y: 3
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -191,9 +191,11 @@ font:
 # Colors (Tomorrow Night)
 colors:
   # Default colors
-  primary:
-    background: '#303d55'
-    foreground: '#A6ACCD'
+  #primary:
+    #background: '#212122'
+    #background: '#2d2d2e'
+    #foreground: '#A6ACCD'
+    #foreground: '#b5b6ba'
 
     # Bright and dim foreground colors
     #
@@ -332,7 +334,7 @@ colors:
   # Whether or not `window.opacity` applies to all cell backgrounds or only to
   # the default background. When set to `true` all cells will be transparent
   # regardless of their background color.
-  #transparent_background_colors: false
+  transparent_background_colors: false
 
 # Bell
 #
@@ -753,6 +755,9 @@ key_bindings:
   # -- Enable Shift+Ctrl for keys
    - { key: H, mods: Control|Shift, chars: "\x1b[72;5u"}
    - { key: L, mods: Control|Shift, chars: "\x1b[76;5u"}
+   - { key: J, mods: Control|Shift, chars: "\x1b[74;6u"}
+   - { key: K, mods: Control|Shift, chars: "\x1b[75;6u"}
+   - { key: Delete,                 chars: "leader2"         }
 
 
   #- { key: Paste,                                       action: Paste          }
